@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 // Enable CORS
 app.use(cors({
-  origin: "https://gamebeats-frontend.vercel.app", // frontend origin
+  origin: process.env.FRONTEND_URL, // frontend origin
   credentials: true, // allow cookies to be sent
 }));
 app.use("/api/auth",authRoutes)
