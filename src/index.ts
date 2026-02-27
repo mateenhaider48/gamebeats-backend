@@ -1,5 +1,8 @@
+import dotenv from "dotenv";
+
+// Load env variables only for local development
 if (process.env.NODE_ENV !== "PRODUCTION") {
-  import('dotenv').then(dotenv => dotenv.config());
+  dotenv.config();
 }
 import connectDB from "./configs/db.config";
 import app from "./app";
